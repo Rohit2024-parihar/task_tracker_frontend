@@ -7,7 +7,7 @@ import { MdAdd } from 'react-icons/md'
 function AddTodo({ setTodos, todos}) {
   console.log(todos,setTodos)
     const [newTodo, setNewTodo] = useState('');
-    const BASE_URL='http://localhost:8000/api/todo'
+    const BASE_URL='https://backend-todo-2.onrender.com/api/todo'
 
     const handleAddTodo = async () => {
         if (!newTodo) return;

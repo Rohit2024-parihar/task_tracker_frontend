@@ -4,7 +4,7 @@ import { CiBookmarkMinus } from 'react-icons/ci'
 
 
 function DeleteTodo({id, setTodos, todos}) {
-    const BASE_URL='http://localhost:8000/api/todo'
+    const BASE_URL='https://backend-todo-2.onrender.com/api/todo'
 
     const [showConfirm, setShowConfirm] = useState(false);
     const [deleteId, setDeleteId] = useState(null);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BaseUrl = "http://localhost:8000/todo_api/"
+const BaseUrl = "https://backend-todo-2.onrender.com/api/todo"
 
 function TodoApp() {
     const [updateTodo, setupdateTodo] = useState('');

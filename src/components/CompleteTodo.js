@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 function CompleteTodo( { todo,todos, setTodos }) {
- const BASE_URL='http://localhost:8000/api/todo'
+ const BASE_URL='https://backend-todo-2.onrender.com/api/todo'
   const handleTodoCompletion = async (id, active) => {
     await axios.put(`${BASE_URL}/${id}/`, { active: active });
     setTodos(todos.map(todo => (todo._id === id ? { ...todo, active } : todo)));
