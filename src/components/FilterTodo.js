@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ListTodo from './ListTodo';
 
-function FilterTodo({ setTodos, todos }) {
+function FilterTodo({ setTodos, todos,setFlag}) {
     const [filter, setFilter] = useState('all');
 
     const filteredTodos = todos.filter(todo => {
@@ -29,7 +29,7 @@ function FilterTodo({ setTodos, todos }) {
             onClick={() => setFilter('inactive')}>Inactive</button>
         </div>
 
-        <ListTodo setTodos={setTodos} filteredTodos={filteredTodos} todos={todos}/>
+        <ListTodo setTodos={setTodos} filteredTodos={filteredTodos} todos={todos} setFlag={setFlag}/>
     </div>
   )
 }

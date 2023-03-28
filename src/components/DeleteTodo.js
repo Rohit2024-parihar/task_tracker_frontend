@@ -3,7 +3,7 @@ import axios from 'axios';
 import { CiBookmarkMinus } from 'react-icons/ci'
 
 
-function DeleteTodo({id, setTodos, todos}) {
+function DeleteTodo({id, setTodos, todos,setFlag}) {
     const BASE_URL='https://backend-todo-2.onrender.com/api/todo'
 
     const [showConfirm, setShowConfirm] = useState(false);
@@ -12,7 +12,8 @@ function DeleteTodo({id, setTodos, todos}) {
 
     const handleDeleteTodo = async (id) => {
         try {
-            await axios.delete(`${BASE_URL}/${id}/`);
+           const res= await axios.delete(`${BASE_URL}/${id}/`);
+           setFlag(res.data);
             setTodos(todos.filter(todo => todo._id !== id));
         } catch (err) {
             console.error(err);

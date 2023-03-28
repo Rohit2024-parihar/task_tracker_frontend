@@ -4,7 +4,7 @@ import { MdAdd } from 'react-icons/md'
 
 // import { BASE_URL } from '../config'
 
-function AddTodo({ setTodos, todos}) {
+function AddTodo({ setTodos, todos,setFlag}) {
   console.log(todos,setTodos)
     const [newTodo, setNewTodo] = useState('');
     const BASE_URL='https://backend-todo-2.onrender.com/api/todo'
@@ -13,8 +13,8 @@ function AddTodo({ setTodos, todos}) {
         if (!newTodo) return;
     
         const res = await axios.post(`${BASE_URL}`,{ title: newTodo, active: true });
-        console.log(res.data)
-        setTodos([res.data, ...todos]);
+        setFlag(res.data)
+        // setTodos([res.data, ...todos]);
         setNewTodo('');
     };
   return (

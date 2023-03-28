@@ -3,7 +3,7 @@ import CompleteTodo from '../components/CompleteTodo'
 import DeleteTodo from './DeleteTodo'
 
 
-function ListTodo({ setTodos, filteredTodos, todos}) {
+function ListTodo({ setTodos, filteredTodos, todos,setFlag}) {
     const handleEditTodo = (id, item) => {
         // setupdateTodo(item)
         console.log(id, item)
@@ -17,7 +17,7 @@ function ListTodo({ setTodos, filteredTodos, todos}) {
 
                     <CompleteTodo todo={todo} setTodos={setTodos} todos={todos}/>
 
-                    <DeleteTodo id={todo._id} setTodos={setTodos} todos={todos}/>
+                    <DeleteTodo id={todo._id} setTodos={setTodos} todos={todos} setFlag={setFlag}/>
                 </li>
             ))}
         </ul>
