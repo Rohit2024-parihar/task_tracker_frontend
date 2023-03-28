@@ -1,7 +1,7 @@
 import React from 'react'
 import CompleteTodo from '../components/CompleteTodo'
 import DeleteTodo from './DeleteTodo'
-import UpdateTodo from './UpdateTodo'
+
 
 function ListTodo({ setTodos, filteredTodos, todos}) {
     const handleEditTodo = (id, item) => {

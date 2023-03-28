@@ -1,11 +1,8 @@
 import React, { useState,} from 'react';
-import axios from 'axios';
-
-import { BASE_URL } from '../config'
 
 function UpdateTodo({ todo, todos, setTodos }) {
     // const [updateTodo, setupdateTodo] = useState('');
-    const [editTodoId, setEditTodoId] = useState(null);
+    
 
 
     const handleEditTodo = (id, item) => {
